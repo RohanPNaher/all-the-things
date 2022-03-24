@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import DeliciousThings from './pages/DeliciousThings/DeliciousThings'
+import RyansThings from './pages/RyansThings/RyansThings'
 import BizarreThings from './pages/BizarreThings/BizarreThings'
 import Landing from './pages/Landing/Landing'
 
@@ -149,6 +150,24 @@ const App = () => {
     },
   ])
 
+  const [goslingsThings, setGoslingsThings] = useState([
+    {
+      name: "Drive",
+      image: "https://media.instylejackets.com/wp-content/uploads/2015/07/Film-Drive-Scorpion-Ryan-Gosling-Satin-Jacket-570x760.jpg",  
+      attributes: ['Life Changing'],
+    },
+    {
+      name: "Blade Runner",
+      image: "https://i.ytimg.com/vi/hbpREOCDCSY/maxresdefault.jpg",  
+      attributes: ['Life Changing'],
+    },
+    {
+      name: "La La Land",
+      image: "https://media.self.com/photos/5830f9039757aade7c08daa9/4:3/w_2560%2Cc_limit/LLL_D41-D42_06803_R.jpg",  
+      attributes: ['Life Changing'],
+    },
+])
+
   const [janaThings, setjanaThings] = useState ([ 
     { 
       name: "Butterfly",
@@ -185,6 +204,10 @@ const App = () => {
       <Route
         path="/the-delicious-things"
         element={<DeliciousThings things={rohansThings} />}
+      />
+      <Route
+        path="/the-ryans-things"
+        element={<RyansThings things={goslingsThings} />}
       />
       <Route 
         path="/the-bizarre-things"
