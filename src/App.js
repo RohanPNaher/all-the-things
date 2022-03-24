@@ -7,6 +7,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import DeliciousThings from './pages/DeliciousThings/DeliciousThings'
 import RyansThings from './pages/RyansThings/RyansThings'
+import BizarreThings from './pages/BizarreThings/BizarreThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -165,6 +166,19 @@ const App = () => {
       image: "https://media.self.com/photos/5830f9039757aade7c08daa9/4:3/w_2560%2Cc_limit/LLL_D41-D42_06803_R.jpg",  
       attributes: ['Life Changing'],
     },
+])
+
+  const [janaThings, setjanaThings] = useState ([ 
+    { 
+      name: "Butterfly",
+      image: "https://i.imgur.com/Bxe4ysr.jpg",
+      attributes: ["fast", "elusive", "colorful"]
+    },
+    { 
+      name: "Burrito",
+      image: "https://i.imgur.com/XtOmjYl.jpg",
+      attributes: ["delicious", "cheesy", "messy", "This is making me hungry"]
+    },
   ])
 
   return (
@@ -194,6 +208,10 @@ const App = () => {
       <Route
         path="/the-ryans-things"
         element={<RyansThings things={goslingsThings} />}
+      />
+      <Route 
+        path="/the-bizarre-things"
+        element={<BizarreThings things={janaThings}/>}
       />
     </Routes>
   )
