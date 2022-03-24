@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import DeliciousThings from './pages/DeliciousThings/DeliciousThings'
+import BizarreThings from './pages/BizarreThings/BizarreThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -148,6 +149,19 @@ const App = () => {
     },
   ])
 
+  const [janaThings, setjanaThings] = useState ([ 
+    { 
+      name: "Butterfly",
+      image: "https://i.imgur.com/Bxe4ysr.jpg",
+      attributes: ["fast", "elusive", "colorful"]
+    },
+    { 
+      name: "Burrito",
+      image: "https://i.imgur.com/XtOmjYl.jpg",
+      attributes: ["delicious", "cheesy", "messy", "This is making me hungry"]
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -171,6 +185,10 @@ const App = () => {
       <Route
         path="/the-delicious-things"
         element={<DeliciousThings things={rohansThings} />}
+      />
+      <Route 
+        path="/the-bizarre-things"
+        element={<BizarreThings things={janaThings}/>}
       />
     </Routes>
   )
