@@ -8,6 +8,7 @@ import SillyThings from './pages/SillyThings/SIllyThings'
 import DeliciousThings from './pages/DeliciousThings/DeliciousThings'
 import RyansThings from './pages/RyansThings/RyansThings'
 import BizarreThings from './pages/BizarreThings/BizarreThings'
+import PizzasThings from './pages/PizzasThings/PizzasThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -181,6 +182,29 @@ const App = () => {
     },
   ])
 
+  const [pizzasThings, setPizzasThings] = useState([
+    {
+      name: "New York",
+      image: "https://images.firstwefeast.com/complex/images/c_limit,f_auto,fl_lossy,q_auto,w_1100/New_York_style_Liz_Barrett_zgqgjj/new-york-slice.jpg",  
+      attributes: ["By the slice"],
+    },
+    {
+      name: "Neapolitan",
+      image: "https://images.firstwefeast.com/complex/images/c_limit,f_auto,fl_lossy,q_auto,w_1100/Neapolitan_Liz_Barrett_dnwsmz/neapolitan-pizza.jpg",  
+      attributes: ["Classic"],
+    },
+    {
+      name: "Grandma",
+      image: "https://images.firstwefeast.com/complex/images/c_limit,f_auto,fl_lossy,q_auto,w_1100/o-5_d656yo/di-fara.jpg",  
+      attributes: ["Sheet tray representer"],
+    },
+    {
+      name: "Detroit Style",
+      image: "https://images.firstwefeast.com/complex/images/c_limit,f_auto,fl_lossy,q_auto,w_1100/3286242811_82e61ce28b_b_sehvya/detroit-style-pizza.jpg",  
+      attributes: ["King of nicely fried crust"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -212,6 +236,10 @@ const App = () => {
       <Route 
         path="/the-bizarre-things"
         element={<BizarreThings things={janaThings}/>}
+      />
+      <Route 
+        path="/the-pizzas-things"
+        element={<PizzasThings things={pizzasThings}/>}
       />
     </Routes>
   )
