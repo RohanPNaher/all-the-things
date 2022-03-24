@@ -5,6 +5,7 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
+import DeliciousThings from './pages/DeliciousThings/DeliciousThings'
 import Landing from './pages/Landing/Landing'
 
 const App = () => {
@@ -129,6 +130,24 @@ const App = () => {
     },
   ])
 
+  const [rohansThings, setRohansThings] = useState([
+    {
+      name: "Brownies",
+      image: "https://i.imgur.com/lQGCzwV.jpeg",  
+      attributes: ["delicious", "beautiful", 'life changing'],
+    },
+    {
+      name: "Crab",
+      image: "https://i.imgur.com/STWFApf.gif",  
+      attributes: ["delicious", "dangerous", 'crustaceous'],
+    },
+    {
+      name: "Burger Cat",
+      image: "https://i.imgur.com/3zYSpb2.jpeg",  
+      attributes: ["Not delicious", "majestic", 'do not eat'],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -148,6 +167,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-delicious-things"
+        element={<DeliciousThings things={rohansThings} />}
       />
     </Routes>
   )
