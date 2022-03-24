@@ -12,6 +12,7 @@ const Landing = () => {
       <Link to="/the-delicious-things">Rohan's Things</Link><br/>
       <Link to="/the-bizarre-things">Jana's Things</Link><br/>
       <Link to="/the-ryans-things">Gosling's Things</Link><br/>
+      <Link to="/the-pizzas-things">Pizza Things</Link><br/>
     </>
   )
 }
